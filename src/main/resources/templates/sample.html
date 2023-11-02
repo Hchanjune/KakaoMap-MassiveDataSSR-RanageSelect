@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Massive Data SSR Sample</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=57542cfef6b77b409619bbfc021fab55"></script>
+</head>
+
+<body>
+    <!-- The div to show the KakaoMap Object -->
+    <div id="mapContainer" style="width: 100vw; height: 100vh; position: fixed; top: 0; left: 200px;"></div>
+</body>
+
+<script type="text/javascript">
+// KakaoMap initial Settings ===========================================================================================
+    // Define HTML element to contain Map Object
+    let mapContainer = document.getElementById('mapContainer');
+    // Define MapOptionObject For kakaoMap
+    let mapOptions = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3
+    };
+    // Initialize Map Object
+    const map = new kakao.maps.Map(mapContainer, mapOptions);
+    // Add MapTypeControl on Map Object
+    const mapTypeControl = new kakao.maps.MapTypeControl();
+    map.addControl(mapTypeControl);
+    // Add ZoomControl on Map Object's RIGHT side
+    const mapZoomControl = new kakao.maps.ZoomControl();
+    map.addControl(mapZoomControl, kakao.maps.ControlPosition.RIGHT);
+// End of KakaoMap initial Settings ====================================================================================
+
+// Globals Declaration =================================================================================================
+    let sessionLatLng = null;
+    let containedMarkers;
+    let selectedMarkers;
+    let isMarkerClickableMode = false;
+    let isClickedMarker = false;
+    let isAreaSelected = false;
+// End of Globals ======================================================================================================
+
+// initializing Logics
+
+// End of Init Logics
+
+</script>
+
+</html>
