@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <!-- Control -->
     <!-- The div to show the KakaoMap Object -->
     <div id="mapContainer" style="width: 100vw; height: 100vh; position: fixed; top: 0; left: 200px;"></div>
 </body>
@@ -32,7 +33,10 @@
     map.addControl(mapZoomControl, kakao.maps.ControlPosition.RIGHT);
 // End of KakaoMap initial Settings ====================================================================================
 
-// Globals Declaration =================================================================================================
+// Globals Declaration & init ==========================================================================================
+    let resultContainer;
+    let interactionContainer;
+
     let sessionLatLng = null;
     let containedMarkers;
     let selectedMarkers;
